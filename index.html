@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>DQ pie chart</title>
+  
+  
+  <link rel='stylesheet' href='https://www.google.com/jsapi'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Bitcoin',    60.44],
+          ['DRGN',      20.4],
+          ['EOS',  8.31],
+          ['NEO', 1.68],
+          ['GAS', 2.64],
+          ['ZIL',    4.53],
+          ['Charitable Fund', 1.99],         
+
+        ]);
+
+        var options = {         
+          is3D: true,
+          legend : { position : 'bottom' },
+          backgroundColor: 'transparent',
+          colors: ['#f2a900', '#4DB6E1', '#333', '#58BF01', '#b5e200', '#012347', '#ae7add'],
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="chart-wrapper">
+      <h1 class="title">Im__DQ Portfolio Snapshot</h1>
+      <div id="piechart_3d"></div>
+    </div>
+   
+  </body>
+</html>
+  
+  
+
+</body>
+
+</html>
